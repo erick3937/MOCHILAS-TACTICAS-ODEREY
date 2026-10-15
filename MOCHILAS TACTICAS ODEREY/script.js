@@ -1,3 +1,19 @@
+(function (window, document, tag, layer, containerId) {
+    window[layer] = window[layer] || [];
+    window[layer].push({
+        "gtm.start": new Date().getTime(),
+        event: "gtm.js"
+    });
+
+    const firstScript = document.getElementsByTagName(tag)[0];
+    const gtmScript = document.createElement(tag);
+    const layerParameter = layer !== "dataLayer" ? "&l=" + layer : "";
+
+    gtmScript.async = true;
+    gtmScript.src = "https://www.googletagmanager.com/gtm.js?id=" + containerId + layerParameter;
+    firstScript.parentNode.insertBefore(gtmScript, firstScript);
+})(window, document, "script", "dataLayer", "GTM-PNWFR3ZK");
+
 /* =====================================================
    ODEREY - CARRITO
 ===================================================== */
