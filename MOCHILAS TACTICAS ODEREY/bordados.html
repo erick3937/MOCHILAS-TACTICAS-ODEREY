@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ODEREY | DANYLOX</title>
+
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        body {
+            background: #0b0b0b;
+            color: #f1f2ef;
+        }
+
+        .barra-envios {
+            background: linear-gradient(90deg, #111111, #1a1a1a, #111111);
+            border-bottom: 1px solid #8f2d2d;
+        }
+
+        header {
+            background: #000000;
+            border-bottom: 1px solid rgba(143, 45, 45, 0.7);
+        }
+
+        nav a {
+            color: #f1f2ef;
+        }
+
+        nav a:hover {
+            color: #bd3c47;
+        }
+
+        .carrito {
+            border-color: #8f2d2d;
+            color: #f1f2ef;
+        }
+
+        .carrito:hover {
+            background: linear-gradient(135deg, #641e2b, #bd3c47);
+            color: #fff;
+        }
+
+        .productos h2,
+        .subtitulo,
+        .producto h3,
+        .precio,
+        .boton-producto,
+        footer p,
+        footer small,
+        .producto p {
+            color: #f1f2ef;
+        }
+
+        .subtitulo {
+            color: #bd3c47;
+        }
+
+        .producto {
+            background: #141414;
+            border: 1px solid rgba(143, 45, 45, 0.6);
+            box-shadow: 0 10px 18px rgba(143, 45, 45, 0.08);
+        }
+
+        .producto:hover {
+            border-color: #bd3c47;
+            box-shadow: 0 12px 22px rgba(143, 45, 45, 0.18);
+        }
+
+        .imagen-producto {
+            background: #1d1d1d;
+        }
+
+        .boton-producto {
+            background: linear-gradient(135deg, #641e2b, #bd3c47);
+            color: #fff;
+        }
+
+        footer {
+            background: #000000;
+            border-top: 1px solid #8f2d2d;
+        }
+    </style>
+</head>
+
+<body class="catalogo-ordenado">
+
+    <!-- BARRA SUPERIOR -->
+
+    <div class="barra-envios">
+
+        <div class="texto-movimiento">
+
+            <span>📦 ENVÍOS A TODO ECUADOR 🇪🇨</span>
+            <span>🚚 ENVÍO GRATIS A PARTIR DE $200</span>
+            <span>📱 PEDIDOS POR WHATSAPP</span>
+            <span>✦ ODEREY</span>
+
+            <span>📦 ENVÍOS A TODO ECUADOR 🇪🇨</span>
+            <span>🚚 ENVÍO GRATIS A PARTIR DE $200</span>
+            <span>📱 PEDIDOS POR WHATSAPP</span>
+            <span>✦ ODEREY</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- MENÚ -->
+
+    <header>
+
+        <div class="logo">
+            <img src="imagenes/BORDADO.jpeg" alt="Logo de DANYLOX">
+        </div>
+
+        <nav>
+
+            <a href="./index.html">INICIO</a>
+
+            <a href="./mochilas.html">MOCHILAS</a>
+
+            <a href="./art%C3%ADculos.html">ARTÍCULOS</a>
+
+            <a href="./bordados.html">BORDADOS</a>
+
+            <a href="./recuerdos.html">RECUERDOS</a>
+
+            <a href="./index.html#contacto">CONTÁCTANOS</a>
+
+        </nav>
+
+        <button class="carrito">
+            🛒 CARRITO
+        </button>
+
+    </header>
+
+    <!-- BORDADOS -->
+
+    <section class="productos">
+
+        <div style="text-align:center; margin-bottom:30px;">
+            <img src="imagenes/BORDADO.jpeg" alt="Bordados" style="max-width:220px; width:100%; height:auto; display:block; margin:0 auto 18px; border-radius:12px; box-shadow:0 12px 22px rgba(143,45,45,0.28);">
+            <h2>DANYLOX</h2>
+        </div>
+
+        <p class="subtitulo">
+            Personalización y detalles bordados para tus prendas y accesorios.
+        </p>
+
+        <section class="producto-destacado">
+
+            <div class="producto-galeria">
+                <div class="imagen-principal">
+                    <img src="imagenes/BORDADO1.png" alt="Parche bordado de calavera blanca">
+                </div>
+            </div>
+
+            <div class="producto-info-detallada">
+                <span class="etiqueta-producto">Especial</span>
+                <h1>Bordado Personalizado</h1>
+                <div class="precios">
+                    <span class="precio-actual">$1.50</span>
+                    <span class="precio-anterior">$2.30</span>
+                </div>
+                <div class="acciones-producto">
+                    <button type="button" class="boton-principal">AGREGAR AL CARRITO</button>
+                </div>
+                <div class="info-retiro">
+                    <span>📍 Retiro disponible en ODEREY</span>
+                    <span>🚚 Envíos a todo Ecuador</span>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="grid-productos">
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+                    <img src="imagenes/BORDADO1.png" alt="Parche bordado de calavera blanca">
+                </div>
+
+                <h3>Bordado Personalizado</h3>
+
+                <p>$1.50</p>
+
+                <button class="boton-producto">
+                    AGREGAR AL CARRITO
+                </button>
+
+            </article>
+
+            <article class="producto">
+
+                <div class="imagen-producto">
+                    <img src="imagenes/BORDADO2.png" alt="Parche bordado táctico de calavera con casco">
+                </div>
+
+                <h3>Bordado Táctico</h3>
+
+                <p>$1.50</p>
+
+                <button class="boton-producto">
+                    AGREGAR AL CARRITO
+                </button>
+
+            </article>
+
+            <article class="producto">
+                <div class="imagen-producto">
+                    <img src="imagenes/VIRGEN%20MARIA.png" alt="Bordado de la Virgen María">
+                </div>
+                <h3>Virgen María</h3>
+                <p>$1.50</p>
+                <button class="boton-producto">AGREGAR AL CARRITO</button>
+            </article>
+
+            <article class="producto">
+                <div class="imagen-producto">
+                    <img src="imagenes/BANDERA%20DEL%20ECUADOR.png" alt="Bordado de la bandera del Ecuador">
+                </div>
+                <h3>Bandera del Ecuador</h3>
+                <p>$1.50</p>
+                <button class="boton-producto">AGREGAR AL CARRITO</button>
+            </article>
+
+            <article class="producto">
+                <div class="imagen-producto">
+                    <img src="imagenes/BANDERA%20VERDE.png" alt="Bordado de bandera verde">
+                </div>
+                <h3>Bandera Verde</h3>
+                <p>$1.50</p>
+                <button class="boton-producto">AGREGAR AL CARRITO</button>
+            </article>
+
+            <article class="producto">
+                <div class="imagen-producto">
+                    <img src="imagenes/BANDERA%20CON%20CALAVERA.png" alt="Bordado de bandera con calavera">
+                </div>
+                <h3>Bandera con Calavera</h3>
+                <p>$1.50</p>
+                <button class="boton-producto">AGREGAR AL CARRITO</button>
+            </article>
+
+            <article class="producto">
+                <div class="imagen-producto">
+                    <img src="imagenes/BANDERA%20VERDE%20CON%20CALAVERA.png" alt="Bordado de bandera verde con calavera">
+                </div>
+                <h3>Bandera Verde con Calavera</h3>
+                <p>$1.50</p>
+                <button class="boton-producto">AGREGAR AL CARRITO</button>
+            </article>
+
+            <article class="producto">
+                <div class="imagen-producto">
+                    <img src="imagenes/JAGUAR.png" alt="Bordado de jaguar">
+                </div>
+                <h3>Jaguar</h3>
+                <p>$1.50</p>
+                <button class="boton-producto">AGREGAR AL CARRITO</button>
+            </article>
+
+            <article class="producto">
+                <div class="imagen-producto">
+                    <img src="imagenes/SELVA.png" alt="Bordado de selva">
+                </div>
+                <h3>Selva</h3>
+                <p>$1.50</p>
+                <button class="boton-producto">AGREGAR AL CARRITO</button>
+            </article>
+
+            <article class="producto">
+                <div class="imagen-producto">
+                    <img src="imagenes/0%2B%20PARA%20CHAQUETA.png" alt="Bordado de tipo de sangre O positivo para chaqueta">
+                </div>
+                <h3>Tipo O+ para Chaqueta</h3>
+                <p>$1.50</p>
+                <button class="boton-producto">AGREGAR AL CARRITO</button>
+            </article>
+
+            <article class="producto">
+                <div class="imagen-producto">
+                    <img src="imagenes/A%2B%20PARA%20CHOMPA.png" alt="Bordado de tipo de sangre A positivo para chompa">
+                </div>
+                <h3>Tipo A+ para Chompa</h3>
+                <p>$1.50</p>
+                <button class="boton-producto">AGREGAR AL CARRITO</button>
+            </article>
+
+            <article class="producto">
+                <div class="imagen-producto">
+                    <img src="imagenes/O%2B%20PARA%20CHOMPA.png" alt="Bordado de tipo de sangre O positivo para chompa">
+                </div>
+                <h3>Tipo O+ para Chompa</h3>
+                <p>$1.50</p>
+                <button class="boton-producto">AGREGAR AL CARRITO</button>
+            </article>
+
+            <article class="producto">
+                <div class="imagen-producto">
+                    <img src="imagenes/EJ%C3%89RCITO%20PARA%20CHAQUETA.png" alt="Bordado de Ejército para chaqueta">
+                </div>
+                <h3>Ejército para Chaqueta</h3>
+                <p>$1.50</p>
+                <button class="boton-producto">AGREGAR AL CARRITO</button>
+            </article>
+
+            <article class="producto">
+                <div class="imagen-producto">
+                    <img src="imagenes/NOMBRE%20PARA%20CHAQUETA.png" alt="Bordado de nombre para chaqueta">
+                </div>
+                <h3>Nombre para Chaqueta</h3>
+                <p>$1.50</p>
+                <button class="boton-producto">AGREGAR AL CARRITO</button>
+            </article>
+
+            <article class="producto">
+                <div class="imagen-producto">
+                    <img src="imagenes/NOMBRE%20%20PARA%20CHOMPA.png" alt="Bordado de nombre para chompa">
+                </div>
+                <h3>Nombre para Chompa</h3>
+                <p>$1.50</p>
+                <button class="boton-producto">AGREGAR AL CARRITO</button>
+            </article>
+
+            <article class="producto">
+                <div class="imagen-producto">
+                    <img src="imagenes/NOMBRE%20PARA%20CHOMPA%20NEGRA.png" alt="Bordado de nombre para chompa negra">
+                </div>
+                <h3>Nombre para Chompa Negra</h3>
+                <p>$1.50</p>
+                <button class="boton-producto">AGREGAR AL CARRITO</button>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <aside class="aviso-experiencia">
+        <div class="texto-experiencia">
+            <h2>ESTAMOS CRECIENDO.</h2>
+            <p>En ODEREY trabajamos constantemente para incorporar nuevos productos y mejorar tu experiencia.</p>
+            <p>Esto es solo el comienzo. Estamos preparando nuevas ideas, novedades y productos que pronto podrás descubrir.</p>
+            <p><strong>Gracias por ser parte de nuestro crecimiento.</strong></p>
+            <p><em>ODEREY — Siempre creando algo nuevo.</em></p>
+        </div>
+        <img src="imagenes/pinguino-pensante.png" alt="Pingüino pensante de ODEREY imaginando nuevas ideas" class="imagen-experiencia">
+    </aside>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+            <img src="imagenes/logo.png" alt="Logo de ODEREY">
+        </div>
+
+        <p>
+            CONFECCIONES TÁCTICAS
+        </p>
+
+        <small>
+            © 2026 ODEREY. Todos los derechos reservados.
+        </small>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

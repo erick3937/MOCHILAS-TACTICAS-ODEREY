@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODEREY | Registro Bordados</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        body {
+            background: #0b0b0b;
+            color: #f5e7b2;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .admin-box {
+            max-width: 900px;
+            margin: 60px auto;
+            background: #121212;
+            border: 1px solid rgba(212, 175, 55, 0.6);
+            border-radius: 16px;
+            padding: 30px 20px;
+            box-shadow: 0 14px 24px rgba(212, 175, 55, 0.08);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #f5e7b2;
+        }
+
+        .subtitulo-admin {
+            text-align: center;
+            color: #d4af37;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        .lista-registros {
+            display: grid;
+            gap: 12px;
+        }
+
+        .registro-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: center;
+            background: #1a1a1a;
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            padding: 14px 18px;
+            border-radius: 10px;
+        }
+
+        .registro-datos {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .registro-item span {
+            color: #f5e7b2;
+        }
+
+        .registro-item small {
+            color: #d4af37;
+        }
+
+        .btn-eliminar {
+            border: none;
+            background: #7a1f1f;
+            color: #fff;
+            padding: 10px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: background 0.2s ease;
+        }
+
+        .btn-eliminar:hover {
+            background: #9b2a2a;
+        }
+
+        .vacio {
+            text-align: center;
+            padding: 25px;
+            border: 1px dashed rgba(212, 175, 55, 0.6);
+            border-radius: 10px;
+            color: #d9d9d9;
+        }
+
+        .volver {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #111;
+            background: linear-gradient(135deg, #d4af37, #f5d76b);
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="admin-box">
+        <p class="subtitulo-admin">Administración</p>
+        <h1>Usuarios registrados con Gmail</h1>
+
+        <div id="listaRegistros" class="lista-registros"></div>
+
+        <div style="text-align:center;">
+            <a class="volver" href="./bordados.html">Volver a Bordados</a>
+        </div>
+    </div>
+
+    <script>
+        function obtenerRegistros() {
+            const datos = localStorage.getItem('usuariosGmailRegistrados');
+            return datos ? JSON.parse(datos) : [];
+        }
+
+        function guardarRegistros(registros) {
+            localStorage.setItem('usuariosGmailRegistrados', JSON.stringify(registros));
+        }
+
+        function renderRegistros() {
+            const lista = document.getElementById('listaRegistros');
+            const registros = obtenerRegistros();
+            lista.innerHTML = '';
+
+            if (!registros.length) {
+                const vacio = document.createElement('div');
+                vacio.className = 'vacio';
+                vacio.textContent = 'Todavía no hay usuarios registrados con Gmail.';
+                lista.appendChild(vacio);
+                return;
+            }
+
+            registros.forEach((item, index) => {
+                const div = document.createElement('div');
+                div.className = 'registro-item';
+
+                const datos = document.createElement('div');
+                datos.className = 'registro-datos';
+
+                const email = document.createElement('span');
+                const fecha = document.createElement('small');
+
+                email.textContent = `${index + 1}. ${item.email}`;
+                fecha.textContent = item.fecha;
+
+                const botonEliminar = document.createElement('button');
+                botonEliminar.type = 'button';
+                botonEliminar.className = 'btn-eliminar';
+                botonEliminar.textContent = 'Eliminar';
+                botonEliminar.addEventListener('click', () => {
+                    const nuevosRegistros = obtenerRegistros().filter((_, i) => i !== index);
+                    guardarRegistros(nuevosRegistros);
+                    renderRegistros();
+                });
+
+                datos.append(email, fecha);
+                div.append(datos, botonEliminar);
+                lista.appendChild(div);
+            });
+        }
+
+        renderRegistros();
+    </script>
+
+</body>
+
+</html>
